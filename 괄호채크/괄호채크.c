@@ -15,6 +15,7 @@ int main() {
 		int digit_check = 0;
 		int check = 0;
 
+		// 검사할 괄호 입력
 		printf("검사할 괄호 입력 : ");
 		scanf_s("%s", bottle, (unsigned)sizeof(bottle));
 
