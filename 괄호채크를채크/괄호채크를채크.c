@@ -8,7 +8,7 @@ int main() {
 	srand((unsigned)time(NULL));
 	int runtime;
 	char bottle[256] = { 0, };
-	int bottle_check = 0;
+	int count = 0;
 	int fail = 0;
 	int random_2;
 
@@ -34,20 +34,20 @@ int main() {
 		printf("\n[%d번째 채크]\n", i + 1);
 
 		for (int i = 0; i < strlen(bottle); i++) {
-			if (bottle_check < 0) {
+			if (count < 0) {
 				fail++;
 			}
 			else {
 				if (bottle[i] == '(') {
-					bottle_check++;
+					count++;
 				}
 				else if (bottle[i] == ')') {
-					bottle_check--;
+					count--;
 				}
 			}
 		}
 
-		if (bottle_check == 0 && fail == 0) {
+		if (count == 0 && fail == 0) {
 			printf("%s\n올바른 괄호 입니다.\n", bottle);
 		}
 		else {
@@ -59,7 +59,7 @@ int main() {
 		}
 
 		fail = 0;
-		bottle_check = 0;
+		count = 0;
 
 	}
 
