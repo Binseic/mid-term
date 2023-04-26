@@ -9,7 +9,6 @@ int main() {
 	int runtime;
 	char bottle[256] = { 0, };
 	int count = 0;
-	int fail = 0;
 	int random_2;
 
 	printf("채크할 횟수 : ");
@@ -33,21 +32,21 @@ int main() {
 		
 		printf("\n[%d번째 채크]\n", i + 1);
 
-		for (int i = 0; i < strlen(bottle); i++) {
+		for (int j = 0; j < strlen(bottle); j++) {
 			if (count < 0) {
-				fail++;
+				j = strlen(bottle);
 			}
 			else {
-				if (bottle[i] == '(') {
+				if (bottle[j] == '(') {
 					count++;
 				}
-				else if (bottle[i] == ')') {
+				else if (bottle[j] == ')') {
 					count--;
 				}
 			}
 		}
 
-		if (count == 0 && fail == 0) {
+		if (count == 0) {
 			printf("%s\n올바른 괄호 입니다.\n", bottle);
 		}
 		else {
@@ -58,7 +57,6 @@ int main() {
 			bottle[j] = 0;
 		}
 
-		fail = 0;
 		count = 0;
 
 	}

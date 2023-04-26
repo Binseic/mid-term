@@ -7,7 +7,6 @@ int main() {
 	// 변수 선언 및 초기화
 	char bottle[256] = { 0, };
 	int count = 0;
-	int fail = 0;
 
 	while (1) {
 
@@ -37,9 +36,9 @@ int main() {
 
 	// 배열의 길이 만큼 반복
 	for (int i = 0; i < strlen(bottle); i++) {
-		// count가 0 보다 작으면 fail 증가
+		// count가 0 보다 작으면 for문 파괴
 		if (count < 0) {
-			fail++;
+			i = strlen(bottle);
 		}
 		else { // count가 0 보다 작지 않을 때
 			// bottle[i] 가 '(' 면 count 증가
@@ -53,8 +52,8 @@ int main() {
 		}
 	}
 
-	//count가 0이고 fail이 0이면 정답 아니면 실패
-	if (count == 0 && fail == 0) {
+	//count가 0이면 정답 아니면 실패
+	if (count == 0) {
 		printf("올바른 괄호 입니다.\n");
 	}
 	else {
