@@ -41,8 +41,7 @@ int main() {
 		if (count < 0) {
 			fail++;
 		}
-		// count가 0 보다 작지 않을 때
-		else {
+		else { // count가 0 보다 작지 않을 때
 			// bottle[i] 가 '(' 면 count 증가
 			if (bottle[i] == '(') {
 				count++;
