@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "괄호채크", "괄호채�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "괄호채크를채크", "괄호채크를채크\괄호채크를채크.vcxproj", "{04A38A89-DDCB-4226-908F-24BDE354A44C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "알파벳피라미드", "알파벳피라미드\알파벳피라미드.vcxproj", "{23176EC7-8F1B-486F-92BD-34422B10FFFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{04A38A89-DDCB-4226-908F-24BDE354A44C}.Release|x64.Build.0 = Release|x64
 		{04A38A89-DDCB-4226-908F-24BDE354A44C}.Release|x86.ActiveCfg = Release|Win32
 		{04A38A89-DDCB-4226-908F-24BDE354A44C}.Release|x86.Build.0 = Release|Win32
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Debug|x64.ActiveCfg = Debug|x64
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Debug|x64.Build.0 = Debug|x64
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Debug|x86.ActiveCfg = Debug|Win32
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Debug|x86.Build.0 = Debug|Win32
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Release|x64.ActiveCfg = Release|x64
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Release|x64.Build.0 = Release|x64
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Release|x86.ActiveCfg = Release|Win32
+		{23176EC7-8F1B-486F-92BD-34422B10FFFD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
