@@ -27,28 +27,19 @@ int main() {
 		// 숫자가 있거나 소괄호의 수가 전체 배열의 수와 맞지 않으면 재입력 및 배열 초기화
 		if (digit_check > 0 || check != strlen(bottle)) {
 			printf("소괄호만 입력해주세요.\n\n");
-			for (int i = 0; i < strlen(bottle); i++) {
-				bottle[i] = 0;
-			}
+			for (int i = 0; i < strlen(bottle); i++) bottle[i] = 0;
 		}
 		else break; // 숫자가 없고 소괄호의 수가 전체 배열의 수와 맞으면 break
 	}
 
 	// 배열의 길이 만큼 반복
 	for (int i = 0; i < strlen(bottle); i++) {
-		// count가 0 보다 작으면 for문 파괴
-		if (count < 0) {
-			i = strlen(bottle);
-		}
+
+		if (count < 0) break; // count가 0 보다 작으면 for문 파괴
 		else { // count가 0 보다 작지 않을 때
-			// bottle[i] 가 '(' 면 count 증가
-			if (bottle[i] == '(') {
-				count++;
-			}
-			// bottle[i] 가 ')' 면 count 하락
-			else if (bottle[i] == ')') {
-				count--;
-			}
+			if (bottle[i] == '(') count++; // bottle[i] 가 '(' 면 count 증가
+			else if (bottle[i] == ')') count--; // bottle[i] 가 ')' 면 count 하락
+
 		}
 	}
 

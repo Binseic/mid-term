@@ -33,16 +33,10 @@ int main() {
 		printf("\n[%d번째 채크]\n", i + 1);
 
 		for (int j = 0; j < strlen(bottle); j++) {
-			if (count < 0) {
-				j = strlen(bottle);
-			}
+			if (count < 0) break;
 			else {
-				if (bottle[j] == '(') {
-					count++;
-				}
-				else if (bottle[j] == ')') {
-					count--;
-				}
+				if (bottle[j] == '(') count++;
+				else if (bottle[j] == ')') count--;
 			}
 		}
 
@@ -53,9 +47,7 @@ int main() {
 			printf("%s\n잘못된 괄호 입니다.\n", bottle);
 		}
 
-		for (int j = 0; bottle[j] != '\0'; j++) {
-			bottle[j] = 0;
-		}
+		for (int j = 0; bottle[j] != '\0'; j++) bottle[j] = 0;
 
 		count = 0;
 
