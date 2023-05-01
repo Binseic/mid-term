@@ -20,12 +20,7 @@ int main() {
 		}
 		for (int j = 0; j < random_2; j++) {
 			int random = rand() % 2;
-			if (random == 0) {
-				bottle[j] = '(';
-			}
-			else if (random == 1) {
-				bottle[j] = ')';
-			}
+			bottle[j] = (random == 0) ? '(' : ')';
 		}
 
 		
