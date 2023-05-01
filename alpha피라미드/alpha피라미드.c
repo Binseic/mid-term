@@ -5,7 +5,7 @@ int main() {
 	while (1) {
 
 		int input = 0;
-		printf("\n몇 층 (0 입력시 종료) : ");
+		printf("몇 층 (0 입력시 종료) : ");
 		int input_check = scanf_s("%d", &input);
 
 		if (!input_check) {
@@ -34,6 +34,7 @@ int main() {
 				printf("\n");
 			}
 		}
+		printf("\n");
 	}
 	return 0;
 }
