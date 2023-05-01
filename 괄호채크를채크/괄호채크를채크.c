@@ -34,8 +34,7 @@ int main() {
 		for (int j = 0; j < strlen(bottle); j++) {
 			if (count < 0) break;
 			else {
-				if (bottle[j] == '(') count++;
-				else if (bottle[j] == ')') count--;
+				bottle[j] == '(' ? count++ : count--;
 			}
 		}
 
