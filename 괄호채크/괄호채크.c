@@ -37,9 +37,7 @@ int main() {
 
 		if (count < 0) break; // count가 0 보다 작으면 for문 파괴
 		else { // count가 0 보다 작지 않을 때
-			if (bottle[i] == '(') count++; // bottle[i] 가 '(' 면 count 증가
-			else if (bottle[i] == ')') count--; // bottle[i] 가 ')' 면 count 하락
-
+			bottle[i] == '(' ? count++ : count--; // bottle[i] 가 '(' 면 count 증가 bottle[i] 가 ')' 면 count 하락
 		}
 	}
 
